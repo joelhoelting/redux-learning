@@ -1,10 +1,25 @@
 import { SET_STACK } from "../actions/actionTypes";
+import { LOAD_STACKS } from "../actions/actionTypes";
 
-function stack(state = {}, action) {
+const initialState = {
+  stack: {},
+  stacks: []
+};
+
+function stack(state = initialState, action) {
   switch (action.type) {
     case SET_STACK:
       const { stack } = action.payload;
-      return stack;
+      return {
+        stack,
+        stacks: [...state.stacks]
+      };
+    case LOAD_STACKS:
+      const { stacks } = action.payload;
+      return {
+        stack: {...state.stack},
+        stacks
+      }
     default:
       return state;
   }

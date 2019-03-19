@@ -1,4 +1,5 @@
 import { SET_STACK } from "./actionTypes";
+import { LOAD_STACKS } from "./actionTypes";
 
 // function setStack(stack) {
 //   const action = {
@@ -15,6 +16,12 @@ export const setStack = stack => ({
   }
 });
 
+export const loadStacks = stacks => ({
+  type: LOAD_STACKS,
+  payload: {
+    stacks
+  }
+})
 
 
 // import { ADD_TODO, TOGGLE_TODO, SET_FILTER } from "./actionTypes";

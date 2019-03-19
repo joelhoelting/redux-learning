@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import StackList from './StackList';
+import '../index.css';
 
 export default class App extends Component {
   render() {

@@ -8,7 +8,7 @@ import App from './components/App';
 import Stack from './components/Stack';
 import { setStack } from './redux/actions';
 
-store.subscribe(() => console.log(store, store.getState()));
+store.subscribe(() => console.log('store', store.getState()));
 store.dispatch(setStack({ id: 0, title: 'example', cards: []}))
 
 ReactDOM.render(
